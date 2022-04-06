@@ -1,6 +1,6 @@
 {
   "name": "opcode-demo-lib",
-  "version": "2.1.1",
+  "version": "2.1.4",
   "description": "Test component library with Storybook and NPM publishing.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

@@ -10,6 +10,7 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o}from
   width: ${e=>e.width};
   position: relative;
   display: inline-block;
+  cursor: pointer;
 `,ut=(function(e){"production"!==process.env.NODE_ENV&&"undefined"!=typeof navigator&&"ReactNative"===navigator.product&&console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");for(var t=arguments.length,r=new Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];var o=qe.apply(void 0,[e].concat(r)).join(""),a=Qe(o);return new ze(a,o)})`
   from {
     top: 0px;
@@ -34,6 +35,8 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o}from
   background: ${e=>e.background};
   border: ${e=>e.border};
   box-shadow: 4px 4px 0px rgba(88, 97, 101, 0.3);
+  cursor: pointer;
+  text-transform: uppercase;
 
   &:hover {
     top: 4px;
@@ -45,4 +48,4 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o}from
   &:active {
     background: ${e=>e.activeBackground}
   }
-`;function pt(t){const{onclick:r,className:n}=t,{width:o,background:a,activeBackground:i,color:s,border:c}=(e=>{switch(e){case"primary":default:return{width:"200px",background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{width:"200px",background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(t.buttonType);return e.createElement(lt,{className:n,width:o},e.createElement(dt,{type:"button",background:a,color:s,border:c,activeBackground:i,onClick:e=>r(e)},t.label))}export{pt as Button};
+`;function pt(t){const{onclick:r,className:n}=t,{width:o,background:a,activeBackground:i,color:s,border:c}=(e=>{switch(e){case"primary":default:return{width:"200px",background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{width:"200px",background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(t.buttonType);return e.createElement(lt,{className:n,width:o,onClick:e=>r(e)},e.createElement(dt,{type:"button",background:a,color:s,border:c,activeBackground:i},t.label))}export{pt as Button};

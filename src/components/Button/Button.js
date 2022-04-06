@@ -6,6 +6,7 @@ const ButtonWrapper = styled.div`
   width: ${props => props.width};
   position: relative;
   display: inline-block;
+  cursor: pointer;
 `
 
 const buttonShadowAnimation = keyframes`
@@ -34,6 +35,8 @@ const StyledButton = styled.button`
   background: ${props => props.background};
   border: ${props => props.border};
   box-shadow: 4px 4px 0px rgba(88, 97, 101, 0.3);
+  cursor: pointer;
+  text-transform: uppercase;
 
   &:hover {
     top: 4px;
@@ -62,14 +65,17 @@ export default function Button(props) {
   } = setButtonSyles(props.buttonType)
 
   return (
-      <ButtonWrapper className={className} width={width}>
+      <ButtonWrapper 
+        className={className} 
+        width={width}
+        onClick={(e) => onclick(e)} 
+      >
         <StyledButton
           type={'button'}
           background={background}
           color={color}
           border={border}
           activeBackground={activeBackground} 
-          onClick={(e) => onclick(e)} 
         >{props.label}</StyledButton>
       </ButtonWrapper>
   )
