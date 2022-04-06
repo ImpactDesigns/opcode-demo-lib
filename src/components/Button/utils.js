@@ -3,6 +3,7 @@ export const setButtonSyles = (type) => {
         case 'primary':
         default:
             return {
+                width: '200px',
                 background: '#586165',
                 activeBackground: 'rgba(88, 97, 101, 0.9)',
                 color: '#FBFCFB',
@@ -10,6 +11,7 @@ export const setButtonSyles = (type) => {
             }
         case 'secondary':
             return {
+                width: '200px',
                 background: '#FBFCFB',
                 activeBackground: '#FFFFFF',
                 color: '#586165',

@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import { setButtonSyles } from './utils'
 
 const ButtonWrapper = styled.div`
+  width: ${props => props.width};
   position: relative;
   display: inline-block;
 `
@@ -24,6 +25,7 @@ const buttonShadowAnimation = keyframes`
 const StyledButton = styled.button`
   box-sizing: border-box;
   position: relative;
+  width: 100%;
   padding: 10px 30px 10px 30px;
   font-size: 18px;
   font-weight: 700;
@@ -46,9 +48,13 @@ const StyledButton = styled.button`
 `
 
 export default function Button(props) {
-  const { onclick } = props
+  const { 
+    onclick, 
+    className,
+  } = props
   
   const {
+    width,
     background,
     activeBackground,
     color,
@@ -56,8 +62,9 @@ export default function Button(props) {
   } = setButtonSyles(props.buttonType)
 
   return (
-      <ButtonWrapper>
+      <ButtonWrapper className={className} width={width}>
         <StyledButton
+          type={'button'}
           background={background}
           color={color}
           border={border}
