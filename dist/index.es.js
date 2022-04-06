@@ -43,4 +43,4 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o}from
   &:active {
     background: ${e=>e.activeBackground}
   }
-`;function pt(t){const{background:r,activeBackground:n,color:o,border:a}=(e=>{switch(e){case"primary":default:return{background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(t.buttonType);return e.createElement(lt,null,e.createElement(dt,{background:r,color:o,border:a,activeBackground:n},t.label))}export{pt as Button};
+`;function pt(t){const{onclick:r}=t,{background:n,activeBackground:o,color:a,border:i}=(e=>{switch(e){case"primary":default:return{background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(t.buttonType);return e.createElement(lt,null,e.createElement(dt,{background:n,color:a,border:i,activeBackground:o,onClick:e=>r(e)},t.label))}export{pt as Button};

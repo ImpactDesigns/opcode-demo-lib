@@ -43,4 +43,4 @@
   &:active {
     background: ${e=>e.activeBackground}
   }
-`;exports.Button=function(e){const{background:t,activeBackground:n,color:o,border:a}=(e=>{switch(e){case"primary":default:return{background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(e.buttonType);return r.default.createElement(st,null,r.default.createElement(lt,{background:t,color:o,border:a,activeBackground:n},e.label))};
+`;exports.Button=function(e){const{onclick:t}=e,{background:n,activeBackground:o,color:a,border:i}=(e=>{switch(e){case"primary":default:return{background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(e.buttonType);return r.default.createElement(st,null,r.default.createElement(lt,{background:n,color:a,border:i,activeBackground:o,onClick:e=>t(e)},e.label))};

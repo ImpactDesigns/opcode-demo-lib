@@ -46,6 +46,7 @@ const StyledButton = styled.button`
 `
 
 export default function Button(props) {
+  const { onclick } = props
   
   const {
     background,
@@ -60,7 +61,8 @@ export default function Button(props) {
           background={background}
           color={color}
           border={border}
-          activeBackground={activeBackground}  
+          activeBackground={activeBackground} 
+          onClick={(e) => onclick(e)} 
         >{props.label}</StyledButton>
       </ButtonWrapper>
   )
