@@ -15,8 +15,8 @@ const Label = styled.label`
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
+    text-align: left;
     color: #586165;
-    // border: 1px dashed green;
 
     & > span {
         margin-left: 2px;
@@ -38,6 +38,8 @@ const StyledInput = styled.input`
 
     &:not(:placeholder-shown) {
         color: #514F4B;
+        font-weight: 400;
+
         border-color: #514F4B;
     }
 
@@ -51,6 +53,8 @@ const StyledInput = styled.input`
     }
 
     &:focus {
+        // font-weight: 400;
+
         border-color: #334FA9;
         outline: none;
     }
@@ -75,6 +79,7 @@ const HelperText = styled.p`
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
+    text-align: left;
     color: #59AF9B;
 `
 
@@ -91,6 +96,7 @@ export default function Input(props) {
     // console.log(555, inputValue)
 
     const {
+        type,
         label,
         id,
         classname,
@@ -110,7 +116,7 @@ export default function Input(props) {
         <InputContainer>
              {required ? <Label>{label}<span>*</span></Label> : <Label>{`${label}`}</Label>}
             <StyledInput 
-                type={'text'}
+                type={type}
                 id={id}
                 className={classname}
                 name={name}
@@ -118,7 +124,7 @@ export default function Input(props) {
                 disabled={disabled}
                 required={required}
                 onChange={(e) => handleInputChange(e)}
-                onBlur={(e) => blur(e)}
+                onBlur={() => blur(inputValue)}
             />
             <HelperTextWrapper>
                 <HelperTextIcon src={errorCircle} alt={'invalid text icon'} />

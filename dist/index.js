@@ -59,8 +59,8 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
+    text-align: left;
     color: #586165;
-    // border: 1px dashed green;
 
     & > span {
         margin-left: 2px;
@@ -80,6 +80,8 @@
 
     &:not(:placeholder-shown) {
         color: #514F4B;
+        font-weight: 400;
+
         border-color: #514F4B;
     }
 
@@ -93,6 +95,8 @@
     }
 
     &:focus {
+        // font-weight: 400;
+
         border-color: #334FA9;
         outline: none;
     }
@@ -113,6 +117,7 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
+    text-align: left;
     color: #59AF9B;
 `,mt=it.img`
     box-sizing: border-box;
@@ -120,4 +125,4 @@
     margin: 0px 2px 0px 0px;
     height: 12px;
     display: inline;
-`;exports.Button=function(e){const{onclick:t,className:n}=e,{width:o,background:a,activeBackground:i,color:s,border:c}=(e=>{switch(e){case"primary":default:return{width:"200px",background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{width:"200px",background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(e.buttonType);return r.default.createElement(st,{className:n,width:o,onClick:e=>t(e)},r.default.createElement(lt,{type:"button",background:a,color:s,border:c,activeBackground:i},e.label))},exports.Input=function(t){const[n,o]=e.useState(null),{label:a,id:i,classname:s,name:c,placeholder:l,disabled:u,required:d,blur:p}=t;return r.default.createElement(ut,null,d?r.default.createElement(dt,null,a,r.default.createElement("span",null,"*")):r.default.createElement(dt,null,`${a}`),r.default.createElement(pt,{type:"text",id:i,className:s,name:c,placeholder:l,disabled:u,required:d,onChange:e=>function(e){const{value:t}=e.target;o((()=>t))}(e),onBlur:e=>p(e)}),r.default.createElement(ft,null,r.default.createElement(mt,{src:'<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M3.00007 6.31065L5.34103 8.71598L9.31069 4.87499L8.25004 3.81433L5.34103 6.59466L4.06073 5.24999L3.00007 6.31065Z" fill="#59AF9B"/>\n<path fill-rule="evenodd" clip-rule="evenodd" d="M6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12ZM6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5Z" fill="#59AF9B"/>\n</svg>',alt:"invalid text icon"}),r.default.createElement(ht,null,"Helper text")))};
+`;exports.Button=function(e){const{onclick:t,className:n}=e,{width:o,background:a,activeBackground:i,color:s,border:c}=(e=>{switch(e){case"primary":default:return{width:"200px",background:"#586165",activeBackground:"rgba(88, 97, 101, 0.9)",color:"#FBFCFB",border:"2px solid #586165"};case"secondary":return{width:"200px",background:"#FBFCFB",activeBackground:"#FFFFFF",color:"#586165",border:"2px solid #586165"}}})(e.buttonType);return r.default.createElement(st,{className:n,width:o,onClick:e=>t(e)},r.default.createElement(lt,{type:"button",background:a,color:s,border:c,activeBackground:i},e.label))},exports.Input=function(t){const[n,o]=e.useState(null),{type:a,label:i,id:s,classname:c,name:l,placeholder:u,disabled:d,required:p,blur:f}=t;return r.default.createElement(ut,null,p?r.default.createElement(dt,null,i,r.default.createElement("span",null,"*")):r.default.createElement(dt,null,`${i}`),r.default.createElement(pt,{type:a,id:s,className:c,name:l,placeholder:u,disabled:d,required:p,onChange:e=>function(e){const{value:t}=e.target;o((()=>t))}(e),onBlur:()=>f(n)}),r.default.createElement(ft,null,r.default.createElement(mt,{src:'<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M3.00007 6.31065L5.34103 8.71598L9.31069 4.87499L8.25004 3.81433L5.34103 6.59466L4.06073 5.24999L3.00007 6.31065Z" fill="#59AF9B"/>\n<path fill-rule="evenodd" clip-rule="evenodd" d="M6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12ZM6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5Z" fill="#59AF9B"/>\n</svg>',alt:"invalid text icon"}),r.default.createElement(ht,null,"Helper text")))};

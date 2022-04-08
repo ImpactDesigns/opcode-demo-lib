@@ -59,8 +59,8 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o,useS
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
+    text-align: left;
     color: #586165;
-    // border: 1px dashed green;
 
     & > span {
         margin-left: 2px;
@@ -80,6 +80,8 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o,useS
 
     &:not(:placeholder-shown) {
         color: #514F4B;
+        font-weight: 400;
+
         border-color: #514F4B;
     }
 
@@ -93,6 +95,8 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o,useS
     }
 
     &:focus {
+        // font-weight: 400;
+
         border-color: #334FA9;
         outline: none;
     }
@@ -113,6 +117,7 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o,useS
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
+    text-align: left;
     color: #59AF9B;
 `,bt=lt.img`
     box-sizing: border-box;
@@ -120,4 +125,4 @@ import e,{useRef as t,useDebugValue as r,useContext as n,createElement as o,useS
     margin: 0px 2px 0px 0px;
     height: 12px;
     display: inline;
-`;function wt(t){const[r,n]=a(null),{label:o,id:i,classname:s,name:c,placeholder:l,disabled:u,required:d,blur:p}=t;return e.createElement(ht,null,d?e.createElement(mt,null,o,e.createElement("span",null,"*")):e.createElement(mt,null,`${o}`),e.createElement(yt,{type:"text",id:i,className:s,name:c,placeholder:l,disabled:u,required:d,onChange:e=>function(e){const{value:t}=e.target;n((()=>t))}(e),onBlur:e=>p(e)}),e.createElement(gt,null,e.createElement(bt,{src:'<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M3.00007 6.31065L5.34103 8.71598L9.31069 4.87499L8.25004 3.81433L5.34103 6.59466L4.06073 5.24999L3.00007 6.31065Z" fill="#59AF9B"/>\n<path fill-rule="evenodd" clip-rule="evenodd" d="M6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12ZM6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5Z" fill="#59AF9B"/>\n</svg>',alt:"invalid text icon"}),e.createElement(vt,null,"Helper text")))}export{ft as Button,wt as Input};
+`;function wt(t){const[r,n]=a(null),{type:o,label:i,id:s,classname:c,name:l,placeholder:u,disabled:d,required:p,blur:f}=t;return e.createElement(ht,null,p?e.createElement(mt,null,i,e.createElement("span",null,"*")):e.createElement(mt,null,`${i}`),e.createElement(yt,{type:o,id:s,className:c,name:l,placeholder:u,disabled:d,required:p,onChange:e=>function(e){const{value:t}=e.target;n((()=>t))}(e),onBlur:()=>f(r)}),e.createElement(gt,null,e.createElement(bt,{src:'<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M3.00007 6.31065L5.34103 8.71598L9.31069 4.87499L8.25004 3.81433L5.34103 6.59466L4.06073 5.24999L3.00007 6.31065Z" fill="#59AF9B"/>\n<path fill-rule="evenodd" clip-rule="evenodd" d="M6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12ZM6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5Z" fill="#59AF9B"/>\n</svg>',alt:"invalid text icon"}),e.createElement(vt,null,"Helper text")))}export{ft as Button,wt as Input};

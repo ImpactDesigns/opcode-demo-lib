@@ -9,6 +9,7 @@ const Template = args => <Input {...args} />
 
 export const DefaultInput = Template.bind({})
 DefaultInput.args = {
+    type: 'text',
     label: 'Name',
     id: 'nameInput',
     classname: 'default-input',
@@ -24,6 +25,7 @@ DefaultInput.args = {
 
 export const DisabledInput = Template.bind({})
 DisabledInput.args = {
+    type: 'text',
     label: 'Name',
     id: 'nameInput',
     classname: 'default-input',
@@ -35,6 +37,7 @@ DisabledInput.args = {
 
 export const RequiredInput = Template.bind({})
 RequiredInput.args = {
+    type: 'text',
     label: 'Name',
     id: 'nameInput',
     classname: 'default-input',
