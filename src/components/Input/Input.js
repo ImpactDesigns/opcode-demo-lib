@@ -6,24 +6,17 @@ import {
     black,
     red,
     blue,
-    green
+    green,
+    white
 }  from '../../colors'
 import '../../assets/styles.css'
 
 const InputContainer = styled.div`
     position:relative;
-    // border: 1px solid red;
 `
 
 const Label = styled.label`
-    position:relative;
     margin-bottom: 8px;
-    display: block;
-    font-family: sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: left;
     color: ${black.base};
 
     & > span {
@@ -33,15 +26,9 @@ const Label = styled.label`
 `
 
 const StyledInput = styled.input`
-    box-sizing: border-box;
-    position:relative;
-    padding: 8px 16px 8px 16px;
     width: 100%;
-    font-family: sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 32px;
     color: ${black.base};
+    background: ${white.light};
     border: 2px solid ${black.light};
 
     &:not(:placeholder-shown) {
@@ -70,19 +57,9 @@ const HelperTextWrapper = styled.div`
     display: flex;
     align-items: center;
     visibility: hidden;
-    border: 1px dashed green;
 `
 
 const HelperText = styled.p`
-    box-sizing: border-box;
-    position:relative;
-    margin: 0px 0px 0px 0px;
-    display: inline;
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    text-align: left;
     color: ${green.base};
 `
 
