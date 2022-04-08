@@ -2,6 +2,13 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import errorCircle from '../../assets/icons/checkmark.svg'
+import { 
+    black,
+    red,
+    blue,
+    green
+}  from '../../colors'
+import '../../assets/styles.css'
 
 const InputContainer = styled.div`
     position:relative;
@@ -17,11 +24,11 @@ const Label = styled.label`
     font-size: 12px;
     line-height: 16px;
     text-align: left;
-    color: #586165;
+    color: ${black.base};
 
     & > span {
         margin-left: 2px;
-        color: #D45555;
+        color: ${red.base};
     }
 `
 
@@ -34,27 +41,24 @@ const StyledInput = styled.input`
     font-weight: 300;
     font-size: 20px;
     line-height: 32px;
-    color: #586165;
-    border: 2px solid #D8D4CF;
+    color: ${black.base};
+    border: 2px solid ${black.light};
 
     &:not(:placeholder-shown) {
-        color: #514F4B;
         font-weight: 400;
-
-        border-color: #514F4B;
+        border-color: ${black.base};
     }
 
     &:placeholder-shown {
-        color: #D8D4CF;
-        border-color: #D8D4CF
+        border-color: ${black.light}
     }
 
     &:hover {
-        border-color: #859EEC;
+        border-color: ${blue.light};
     }
 
     &:focus {
-        border-color: #334FA9;
+        border-color: ${blue.dark};
         outline: none;
     }
 `
@@ -79,7 +83,7 @@ const HelperText = styled.p`
     font-size: 10px;
     line-height: 12px;
     text-align: left;
-    color: #59AF9B;
+    color: ${green.base};
 `
 
 const HelperTextIcon = styled.img`
