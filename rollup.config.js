@@ -4,6 +4,7 @@ import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
 import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser';
+import svg from 'rollup-plugin-svg'
 
 export default [
     {
@@ -33,7 +34,8 @@ export default [
             commonjs({
                 include: /node_modules/
             }),
-            terser()
+            svg(),
+            terser(),
         ]
     }
 ]
