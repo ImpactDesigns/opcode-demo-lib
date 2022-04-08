@@ -1,0 +1,12 @@
+button {
+    box-sizing: border-box;
+    padding: 10px 30px 10px 30px;
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    box-shadow: 4px 4px 0px rgba(88, 97, 101, 0.3);
+    cursor: pointer;
+    text-transform: uppercase;
+}
