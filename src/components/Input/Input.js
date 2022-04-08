@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import errorCircle from '../../assets/icons/checkmark.svg'
 
 const InputContainer = styled.div`
-    // width: 300px;
-    // border: 1px solid dodgerblue;
+    position:relative;
+    // border: 1px solid red;
 `
 
 const Label = styled.label`
+    position:relative;
     margin-bottom: 8px;
     display: block;
     font-family: sans-serif;
@@ -19,6 +21,7 @@ const Label = styled.label`
 
 const StyledInput = styled.input`
     box-sizing: border-box;
+    position:relative;
     padding: 8px 16px 8px 16px;
     width: 100%;
     font-family: sans-serif;
@@ -48,7 +51,35 @@ const StyledInput = styled.input`
     }
 `
 
+const HelperTextWrapper = styled.div`
+    box-sizing: border-box;
+    position:relative;
+    margin: 4px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    border: 1px dashed green;
+`
 
+const HelperText = styled.p`
+    box-sizing: border-box;
+    position:relative;
+    margin: 0px 0px 0px 0px;
+    display: inline;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #59AF9B;
+`
+
+const HelperTextIcon = styled.img`
+    box-sizing: border-box;
+    position:relative;
+    margin: 0px 2px 0px 0px;
+    height: 12px;
+    display: inline;
+`
 
 export default function Input(props) {
   return (
@@ -57,6 +88,10 @@ export default function Input(props) {
         <StyledInput 
             placeholder={props.placeholder} 
         />
+        <HelperTextWrapper>
+            <HelperTextIcon src={errorCircle} alt={'invalid text icon'} />
+            <HelperText>Helper text</HelperText>
+        </HelperTextWrapper>
       </InputContainer>
   )
 }
