@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import PropTypes from 'prop-types'
 import { setButtonSyles } from './utils'
 
 const ButtonWrapper = styled.div`
@@ -79,4 +80,17 @@ export default function Button(props) {
         >{props.label}</StyledButton>
       </ButtonWrapper>
   )
+}
+
+Button.propTypes = {
+  buttonType: PropTypes.oneOf([
+    'primary',
+    'secondary'
+  ]).isRequired,
+  label: PropTypes.string.isRequired
+}
+
+Button.defaultProps = {
+  buttonType: 'primary',
+  label: 'Button'
 }

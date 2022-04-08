@@ -54,8 +54,6 @@ const StyledInput = styled.input`
     }
 
     &:focus {
-        // font-weight: 400;
-
         border-color: #334FA9;
         outline: none;
     }
@@ -94,7 +92,6 @@ const HelperTextIcon = styled.img`
 
 export default function Input(props) {
     const [inputValue, setInputValue] = useState(null)
-    // console.log(555, inputValue)
 
     const {
         type,
