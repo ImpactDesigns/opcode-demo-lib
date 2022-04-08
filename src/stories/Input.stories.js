@@ -18,8 +18,8 @@ DefaultInput.args = {
     disabled: false,
     required: false,
     blur: function(e) {
-        const { value } = e.target
-        console.log(value)
+        // const { value } = e.target
+        console.log('Blur has been fired.')
     }
 }
 
@@ -45,5 +45,8 @@ RequiredInput.args = {
     placeholder: 'Name',
     disabled: false,
     required: true,
-    blur: () => console.log('blur has been fired')
+    blur: function(e) {
+        // const { value } = e.target
+        console.log('Blur has been fired.')
+    }
 }

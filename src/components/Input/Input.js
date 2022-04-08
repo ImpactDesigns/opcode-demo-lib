@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import errorCircle from '../../assets/icons/checkmark.svg'
 
 const InputContainer = styled.div`
@@ -132,4 +133,26 @@ export default function Input(props) {
             </HelperTextWrapper>
         </InputContainer>
     )
+}
+
+Input.propTypes = {
+    type: PropTypes.oneOf([
+        'text',
+        'email'
+    ]).isRequired,
+    label: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    className: PropTypes.string,
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
+    disabled: PropTypes.bool,
+    required: PropTypes.bool.isRequired,
+    blur: PropTypes.func
+}
+
+Input.defaultProps = {
+    type: 'text',
+    label: 'Label',
+    required: false,
+    blur: () => console.log('Blur fired')
 }
