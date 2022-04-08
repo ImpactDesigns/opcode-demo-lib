@@ -15,7 +15,11 @@ DefaultInput.args = {
     name: 'nameInput',
     placeholder: 'Name',
     disabled: false,
-    required: false
+    required: false,
+    blur: function(e) {
+        const { value } = e.target
+        console.log(value)
+    }
 }
 
 export const DisabledInput = Template.bind({})
@@ -37,5 +41,6 @@ RequiredInput.args = {
     name: 'nameInput',
     placeholder: 'Name',
     disabled: false,
-    required: true
+    required: true,
+    blur: () => console.log('blur has been fired')
 }

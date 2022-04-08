@@ -97,7 +97,8 @@ export default function Input(props) {
         name,
         placeholder,
         disabled,
-        required
+        required,
+        blur
     } = props
 
     function handleInputChange(e) {
@@ -117,7 +118,7 @@ export default function Input(props) {
                 disabled={disabled}
                 required={required}
                 onChange={(e) => handleInputChange(e)}
-                onBlur={() => console.log('blur fired', inputValue)}
+                onBlur={(e) => blur(e)}
             />
             <HelperTextWrapper>
                 <HelperTextIcon src={errorCircle} alt={'invalid text icon'} />
