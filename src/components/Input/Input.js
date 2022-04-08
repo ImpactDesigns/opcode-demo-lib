@@ -17,6 +17,11 @@ const Label = styled.label`
     line-height: 16px;
     color: #586165;
     // border: 1px dashed green;
+
+    & > span {
+        margin-left: 2px;
+        color: #D45555;
+    }
 `
 
 const StyledInput = styled.input`
@@ -94,7 +99,9 @@ export default function Input(props) {
 
     return (
         <InputContainer>
-            <Label>{label}</Label>
+            {/* <Label>{label}</Label> */}
+             {/* {required ? <Label>{`${label}*`}</Label> : <Label>{`${label}`}</Label>} */}
+             {required ? <Label>{label}<span>*</span></Label> : <Label>{`${label}`}</Label>}
             <StyledInput 
                 type={'text'}
                 id={id}
