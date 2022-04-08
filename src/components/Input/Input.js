@@ -99,8 +99,6 @@ export default function Input(props) {
 
     return (
         <InputContainer>
-            {/* <Label>{label}</Label> */}
-             {/* {required ? <Label>{`${label}*`}</Label> : <Label>{`${label}`}</Label>} */}
              {required ? <Label>{label}<span>*</span></Label> : <Label>{`${label}`}</Label>}
             <StyledInput 
                 type={'text'}
