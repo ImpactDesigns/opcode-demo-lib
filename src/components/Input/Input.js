@@ -150,6 +150,5 @@ Input.propTypes = {
 Input.defaultProps = {
     type: 'text',
     label: 'Label',
-    required: false,
-    blur: () => console.log('Blur fired')
+    required: false
 }
