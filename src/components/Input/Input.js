@@ -82,16 +82,32 @@ const HelperTextIcon = styled.img`
 `
 
 export default function Input(props) {
-  return (
-      <InputContainer>
-        <Label>Label</Label>
-        <StyledInput 
-            placeholder={props.placeholder} 
-        />
-        <HelperTextWrapper>
-            <HelperTextIcon src={errorCircle} alt={'invalid text icon'} />
-            <HelperText>Helper text</HelperText>
-        </HelperTextWrapper>
-      </InputContainer>
-  )
+    const {
+        label,
+        id,
+        classname,
+        name,
+        placeholder,
+        disabled,
+        required
+    } = props
+
+    return (
+        <InputContainer>
+            <Label>{label}</Label>
+            <StyledInput 
+                type={'text'}
+                id={id}
+                className={classname}
+                name={name}
+                placeholder={placeholder} 
+                disabled={disabled}
+                required={required}
+            />
+            <HelperTextWrapper>
+                <HelperTextIcon src={errorCircle} alt={'invalid text icon'} />
+                <HelperText>Helper text</HelperText>
+            </HelperTextWrapper>
+        </InputContainer>
+    )
 }

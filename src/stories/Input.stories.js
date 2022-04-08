@@ -9,6 +9,11 @@ const Template = args => <Input {...args} />
 
 export const DefaultInput = Template.bind({})
 DefaultInput.args = {
-    label: 'Label',
-    placeholder: 'Placeholder'
+    label: 'Name',
+    id: 'nameInput',
+    classname: 'default-input',
+    name: 'nameInput',
+    placeholder: 'Name',
+    disabled: false,
+    required: false
 }
