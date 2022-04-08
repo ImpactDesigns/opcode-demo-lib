@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import errorCircle from '../../assets/icons/checkmark.svg'
 
@@ -87,6 +87,9 @@ const HelperTextIcon = styled.img`
 `
 
 export default function Input(props) {
+    const [inputValue, setInputValue] = useState(null)
+    // console.log(555, inputValue)
+
     const {
         label,
         id,
@@ -96,6 +99,11 @@ export default function Input(props) {
         disabled,
         required
     } = props
+
+    function handleInputChange(e) {
+        const { value } = e.target
+        setInputValue(() => value)
+    }
 
     return (
         <InputContainer>
@@ -108,6 +116,8 @@ export default function Input(props) {
                 placeholder={placeholder} 
                 disabled={disabled}
                 required={required}
+                onChange={(e) => handleInputChange(e)}
+                onBlur={() => console.log('blur fired', inputValue)}
             />
             <HelperTextWrapper>
                 <HelperTextIcon src={errorCircle} alt={'invalid text icon'} />
