@@ -9,7 +9,7 @@ import svg from 'rollup-plugin-svg'
 export default [
     {
         input: './src/index.js',
-        output: [
+        output: [ 
             {
                 file: 'dist/index.js',
                 format: 'cjs'
